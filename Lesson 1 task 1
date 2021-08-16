@@ -1,0 +1,14 @@
+duration =int(input('Введите временной интервал, сек  - '))
+days = duration // (24*3600)
+hour = (duration % (24*3600)) // 3600
+minute = (duration % (24*3600)%3600) // 60
+seconds = duration % 60
+duration_human = ['дн','час','мин','сек']
+if 0< duration < 60:
+ print(seconds, duration_human[3])
+elif 60 <= duration < 3600:
+    print(minute, duration_human[2], seconds, duration_human[3])
+elif 3600 <= duration < 86400:
+        print (hour, duration_human[1], minute, duration_human[2], seconds, duration_human[3])
+else:
+    print (days, duration_human[0], hour, duration_human[1], minute, duration_human[2], seconds, duration_human[3])
