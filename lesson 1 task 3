@@ -1,0 +1,12 @@
+value = 0;
+percent_russian = ['процент','процента','процентов']
+while value <100:
+    value = (value + 1)
+    if value % 10 == 1 and value != 11:
+       print(value, percent_russian[0])
+    elif 2 <= value % 10 <= 4:
+        print(value, percent_russian[1])
+    elif 5 <= value % 10 <= 9 or value % 10 ==0:
+        print(value, percent_russian[2])
+    elif value == 11:
+     print(value, percent_russian[2])
